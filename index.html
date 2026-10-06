@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calendar Studio · EFX Economic Calendar Generator</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app">
+<header class="titlebar">
+<div class="brand"><img src="assets/logo.jpg" alt=""><b>Calendar Studio</b><small>by KouchakiDev</small></div>
+<div class="grow"></div>
+<div class="seg" id="langSeg" role="group" aria-label="Language"><button data-l="fa" title="فارسی"></button><button data-l="en" title="English"></button></div>
+<button class="icon" id="themeBtn" title="Theme" aria-label="Theme">
+<svg class="sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.200"/><path d="M12 2.500v2.500M12 19v2.500M2.500 12H5M19 12h2.500M5.300 5.300l1.800 1.800M16.900 16.900l1.800 1.800M5.300 18.700l1.800-1.800M16.900 7.100l1.800-1.800"/></svg>
+<svg class="moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.500 14.500A8.500 8.500 0 0 1 9.500 3.500a8.500 8.500 0 1 0 11 11Z"/></svg>
+</button>
+</header>
+<div class="shell">
+<aside class="side">
+<h3 data-i="tpls"></h3><div id="tplList"></div>
+<h3 data-i="exp"></h3>
+<label><span data-i="res"></span><select id="res"><option value="1920">Full HD · 1920</option><option value="2560">2K · 2560</option><option value="3840" selected>4K · 3840</option><option value="7680">8K · 7680</option></select></label>
+<label><span data-i="min"></span><select id="min"><option value="0" data-i="all"></option><option value="2" data-i="mh"></option><option value="3" data-i="hi"></option></select></label>
+<button class="pri" id="bSvg" data-i="svg"></button><button class="pri" id="bPng" data-i="png"></button>
+<button id="bLogo" data-i="logo"></button>
+</aside>
+<main class="stage"><div class="bar"><button id="zo" class="icon">−</button><span id="zv">100%</span><button id="zi" class="icon">+</button><button id="zf" data-i="fit"></button></div><div class="canvas" id="pv"></div></main>
+<section class="insp">
+<div class="tabs"><button class="on" data-t="d" data-i="data"></button><button data-t="t" data-i="tp"></button><button data-t="e" data-i="elem"></button></div>
+<textarea id="jd" spellcheck="false" aria-label="data"></textarea><textarea id="jt" spellcheck="false" aria-label="template" hidden></textarea>
+<div id="je" class="ed" hidden></div>
+<div id="err" role="alert"></div>
+<div class="row"><button id="bSample" data-i="sample"></button><button id="bFmt" data-i="fmt"></button><button id="bImpD" data-i="impD"></button><button id="bImpT" data-i="impT"></button><button id="bSaveT" data-i="saveT"></button></div>
+</section>
+</div>
+<footer class="status"><span id="s1"></span><span class="grow"></span><span>v1.0.0 · github.com/KouchakiDev</span></footer>
+</div>
+<script src="js/world-flags.js"></script>
+<script src="js/flags.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/data.js"></script>
+<script src="js/fonts.js"></script>
+<script src="js/app.js"></script>
+<script src="js/editor.js"></script>
+</body>
+</html>
